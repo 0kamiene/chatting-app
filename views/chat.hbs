@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatter</title>
+    <link rel="stylesheet" type="text/css" href="./chat.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Chatter</h2>
+                <a href="/dashboard">Dashboard</a>
+        </div>
+        <div class="center">
+            <div class="header">
+                <h1>Chats</h1>
+            </div>
+            <div class="chatbox-container">
+                <div class="message-display">
+                    <!-- dummy messages
+                       <div class="others-message">
+                           <div class="message-text">Hello!</div>
+                           <div class="message-info">Sent at 12:59 AM</div>
+                       </div>
+                       <div class="user-message">
+                           <div class="message-text">Hi there!</div>
+                           <div class="message-info">Sent at 12:59 AM</div>
+                       </div>
+                    -->
+                </div>
+                    <div class="footer">
+                        <div class="message-form">
+                            <form id="chat-form">
+                                <input type="text" id="messageInput" autocomplete="off" placeholder="Type your message...">
+                                <button type="submit" class="send-button">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+</body>
+</html>
+
+
+
+

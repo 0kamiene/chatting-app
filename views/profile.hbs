@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chatter</title>
+    <link rel="stylesheet" type="text/css" href="./profile.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Chatter</h2>
+            <a href="/dashboard">Dashboard</a>
+        </div>
+        <div class="center">
+            <h2>Profile</h2>
+            <div class="center">
+                <p>Name: {{name}}</p>
+                <p>Username: {{username}}</p>
+                <form id="profile-form">
+                    <p>Age: <input type="number" id="age" value="{{user.age}}" /></p>
+                    <p>
+                        Birthday: <input type="date" id="birthday" value="{{user.birthday}}" />
+                    </p>
+                    <input type="submit" value="Update" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ageInput = document.getElementById("age");
+        const birthdayInput = document.getElementById("birthday");
+        const form = document.getElementById("profile-form");
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const response = await fetch("/profile", {
+                method: "POST",
+                body: JSON.stringify({
+                    age: ageInput.value,
+                    birthday: birthdayInput.value,
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            const data = await response.json();
+            window.location.href = "/profile";
+        });
+    </script>
+</body>
+</html>

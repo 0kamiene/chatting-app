@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatter</title>
+    <link rel="stylesheet" type="text/css" href="./chUsername.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Chatter</h2>
+            <a href="/account">Account</a>
+        </div>
+        <div class="center">
+            <h2>Account Setting</h2>
+            <form action="/chUsername" method="POST">
+                <!-- Updated form with action and method -->
+                <label for="newUsername">Change Username:</label>
+                <input type="text" id="newUsername" autocomplete="off" name="newUsername" required> <!-- Changed input name to newUsername -->
+                <br>
+                <input type="submit" value="Save Changes">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

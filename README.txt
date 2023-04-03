@@ -16,7 +16,8 @@ http://localhost:3000/
 press enter...
 
 source:
-https://github.com/0kamiene/chattingapp.git
+https://github.com/0kamiene/chatting-app
+
 
 mongodb:
 mongodb+srv://admin:admin@cluster0.ls1sccs.mongodb.net/test
